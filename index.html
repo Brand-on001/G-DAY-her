@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>For You, Ma Babbyy ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400..700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================= -->
+<!-- GLOBAL AMBIENT BACKGROUND     -->
+<!-- ============================= -->
+<div class="ambient-bg" id="ambientBg">
+    <div class="bg-gradient"></div>
+    <div class="stars-layer" id="starsLayer"></div>
+    <div class="bokeh-layer" id="bokehLayer"></div>
+    <div class="light-beams">
+        <span class="beam beam1"></span>
+        <span class="beam beam2"></span>
+        <span class="beam beam3"></span>
+    </div>
+    <!-- floating hearts / sparkles / roses / emojis get injected here by JS -->
+    <div class="floaters-layer" id="floatersLayer"></div>
+</div>
+
+<!-- ============================= -->
+<!-- MUSIC PLAYER (persists always)-->
+<!-- ============================= -->
+<div class="music-player" id="musicPlayer">
+    <span class="music-label">🎵 Fav Song</span>
+    <div class="music-controls">
+        <button id="volDownBtn" class="music-btn" aria-label="Volume Down" title="Volume Down">−</button>
+        <button id="playPauseBtn" class="music-btn play-btn" aria-label="Play or Pause" title="Play/Pause">⏸</button>
+        <button id="volUpBtn" class="music-btn" aria-label="Volume Up" title="Volume Up">+</button>
+    </div>
+</div>
+<audio id="bgMusic" src="assets/favorite-song.mp3" loop preload="auto"></audio>
+
+<!-- ============================= -->
+<!-- APP CONTAINER / PAGES         -->
+<!-- ============================= -->
+<main id="app">
+
+    <!-- ===================== LOGIN PAGE ===================== -->
+    <section class="page active" id="page-login" data-page="login">
+        <div class="login-card glass-card">
+            <div class="card-glow"></div>
+            <div class="card-hearts">
+                <span>❤️</span><span>💕</span><span>💖</span><span>✨</span>
+            </div>
+            <h1 class="login-heading script-font">For you and only you<br>Ma Babbyy ❤️</h1>
+
+            <form id="loginForm" class="login-form" autocomplete="off">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Your secret name..." required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Our secret word..." required>
+                </div>
+
+                <p class="error-message" id="errorMessage">Oops Babbyy ❤️...that's not our secret.</p>
+            </form>
+        </div>
+
+        <!-- Fixed bottom-right, outside the card, so it never overlaps the inputs.
+             "form" attribute ties it to loginForm even though it lives outside the <form> tag. -->
+        <button type="submit" form="loginForm" id="loginSubmitBtn" class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== PAGE 2 — AFFIRMATIONS ===================== -->
+    <section class="page" id="page-2" data-page="2">
+        <div class="content-card glass-card affirmations-card">
+            <h2 class="page-title script-font">Words For You, My Love ❤️</h2>
+            <div class="typewriter-wrap">
+                <p class="typewriter-text" id="typewriterText"></p>
+            </div>
+        </div>
+        <button class="btn btn-ghost back-btn">Back ❤️</button>
+        <button class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== PAGE 3 — GIFT BOX / FAVORITE PIC ===================== -->
+    <section class="page" id="page-3" data-page="3">
+        <div class="content-card glass-card giftbox-card">
+            <h2 class="page-title script-font">My Favorite Smile ❤️</h2>
+
+            <div class="gift-wrap" id="giftWrap">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid"></div>
+                    <div class="gift-base"></div>
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-ribbon-h"></div>
+                    <div class="gift-bow">🎀</div>
+                    <div class="gift-glow"></div>
+                </div>
+                <button class="btn btn-primary open-btn" id="openGiftBtn">Open ❤️</button>
+            </div>
+
+            <div class="reveal-photo-wrap hidden" id="revealPhotoWrap">
+                <div class="photo-glow"></div>
+                <img src="assets/favorite.jpeg" alt="Her favorite smile" class="reveal-photo" id="revealPhoto">
+            </div>
+        </div>
+        <button class="btn btn-ghost back-btn">Back ❤️</button>
+        <button class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== PAGE 4 — REASSURANCE ===================== -->
+    <section class="page" id="page-4" data-page="4">
+        <div class="content-card glass-card reassurance-card">
+            <h2 class="page-title script-font">You Are My Gal🥰🫶</h2>
+            <div class="scroll-text">
+                <p>From the very first moment you became part of my life, everything simply made more sense. You are not just someone I love — you are someone I <em>value</em>, someone I am endlessly grateful for, and someone I feel genuinely lucky to call mine.</p>
+                <p>Every single day with you, no matter how ordinary it may seem, is a moment I cherish quietly in my heart. I never take it for granted — not your laugh, not your presence, not the way you make an ordinary room feel like home.</p>
+                <p>I am ready — fully and completely — to protect what we have, to nurture it gently, and to watch it grow into something even more beautiful with time. Because this isn't about me, and it isn't about you. It's about <strong>US</strong>.</p>
+                <p>So here is my promise to you: I promise consistency, even on the hard days. I promise honest, open communication, even when it's uncomfortable. I promise loyalty that never wavers. I promise patience, again and again. And I promise, without a single doubt, to choose you — to choose <strong>US</strong> — every single day.</p>
+                <p class="closing-line">I'll always choose US. 🤧😩</p>
+            </div>
+        </div>
+        <button class="btn btn-ghost back-btn">Back ❤️</button>
+        <button class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== PAGE 5 — LOVE LETTER ===================== -->
+    <section class="page golden-theme" id="page-5" data-page="5">
+        <div class="content-card glass-card letter-card">
+            <h2 class="page-title script-font">A Little Letter For You</h2>
+            <div class="letter-body">
+                <p class="letter-line">My Gal🫶😩🤧,</p>
+                <p>On this Girlfriends' Day, my heart is overflowing with gratitude — for you, for us, for every quiet and loud moment we've shared. Thank you for the laughter that fills our ordinary days, and for the memories that have become some of my favorite treasures.</p>
+                <p>I think about our future often — the dreams we haven't lived yet, the places we'll go, the little life we're slowly building together. And every time, I smile, because I know I get to build it with you.</p>
+                <p>Forever is a big word, but with you, it doesn't feel far away at all. It feels like tomorrow. It feels like today.</p>
+                <p class="letter-signoff">Yours, always and completely.😩😘</p>
+            </div>
+        </div>
+        <button class="btn btn-ghost back-btn">Back ❤️</button>
+        <button class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== PAGE 6 — DUAL PHOTO ZOOM ===================== -->
+    <section class="page" id="page-6" data-page="6">
+        <div class="content-card glass-card gallery-card">
+            <h2 class="page-title script-font">Every Angle, Every Smile ❤️</h2>
+            <div class="dual-photo-stage">
+                <img src="assets/pic1.jpeg" alt="Her, picture one" class="stage-photo photo-a" id="photoA">
+                <img src="assets/pic2.jpeg" alt="Her, picture two" class="stage-photo photo-b" id="photoB">
+            </div>
+        </div>
+        <button class="btn btn-ghost back-btn">Back ❤️</button>
+        <button class="btn btn-primary continue-btn">Continue My Gal ❤️</button>
+    </section>
+
+    <!-- ===================== FINAL PAGE ===================== -->
+    <section class="page final-theme" id="page-final" data-page="final">
+        <div class="giant-heart" id="giantHeart">❤️</div>
+        <div class="content-card glass-card final-card">
+            <h2 class="page-title script-font">Happy Girlfriends' Day, My Love🥰❤️</h2>
+            <div class="final-text">
+                <p>I want to thank you for existing. I thank you for loving me the way you do, and for choosing me — again and again — even when it would've been easier not to.</p>
+                <p>I love you more today than yesterday, and I already know tomorrow will prove that right again.</p>
+                <p class="final-closing script-font">Forever starts with US.<br>I Love You Always 🫠❤️</p>
+            </div>
+        </div>
+        <button class="btn btn-primary close-btn" id="closeSurpriseBtn">Close My Surprise ❤️</button>
+    </section>
+
+</main>
+
+<!-- Confetti / fireflies canvas layer for final page -->
+<canvas id="confettiCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
