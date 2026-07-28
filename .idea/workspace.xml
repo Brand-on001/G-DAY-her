@@ -5,8 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G-Day1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favorite.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/favorite.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pic1.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/pic1.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pic2.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/assets/pic2.JPEG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +55,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BRANDON\IdeaProjects\G-Day1" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="G-Day1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
