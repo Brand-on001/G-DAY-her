@@ -6,7 +6,7 @@
 const CONFIG = {
     // 🔐 Change these to your own secret login details
     username: "Cinty Love",
-    password: "My Gal",
+    password: "My G",
 
     // Page order used for Continue / Back navigation
     pageOrder: ["login", "2", "3", "4", "5", "6", "final"],
